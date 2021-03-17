@@ -1,0 +1,14 @@
+CustomForm.first_page:
+  path: 'first-page'
+  defaults:
+    _controller: '\Drupal\customForm\Controller\FirstPageController::content'
+    _title: 'Hello World!'
+  requirements:
+    _permission: 'access content'
+CustomForm.form:
+  path: 'contact-form'
+  defaults: 
+    _form: '\Drupal\customForm\Form\ContactForm'
+    _title: 'Contact Form'
+  requirements:
+    _permission: 'access content'

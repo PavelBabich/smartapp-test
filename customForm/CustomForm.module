@@ -1,0 +1,12 @@
+<?php 
+
+/**
+* Implementing hook_mail()
+*/
+function CustomForm_mail($key, &$message, $params)
+{
+    $message['subject'] = $params['subject'];
+    $message['from'] = $params['email'];        
+    $message['body'][] = $params['message'];        
+
+}
